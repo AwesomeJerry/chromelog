@@ -8,8 +8,11 @@
     "build": "npm run clean && babel src/ --out-dir lib/",
     "watch": "npm run clean && babel -w src/ --out-dir lib/",
     "clean": "rm -rf lib/",
-    "dist": "npm run build && cp -rf lib/* . && cp server.js server && chmod 755 server",
-    "dist-clean": "npm run clean && rm ./*.js server"
+    "dist": "npm run build && cp -rf lib/* . && chmod 755 server.js",
+    "dist-clean": "npm run clean && rm ./*.js"
+  },
+  "bin": {
+    "chromelog": "./server.js"
   },
   "author": "kapil verma <kapv89@gmail.com>",
   "license": "ISC",
