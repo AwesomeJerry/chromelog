@@ -46,12 +46,12 @@ function run(host, port) {
   server.listen(port, host, () => {
     console.log(`listening on ${host}:${port}`);
     exec(`google-chrome http://${host}:${port}`);
-    printIp();
+    printIp(port);
   });
 }
 
 // something to print ip wherever
-function printIp() {
+function printIp(port) {
   const ifaces = os.networkInterfaces();
 
   Object.keys(ifaces).forEach((ifname) => {
@@ -65,10 +65,10 @@ function printIp() {
 
       if (alias >= 1) {
         // this single interface has multiple ipv4 addresses
-        console.log(ifname + ':' + alias, iface.address);
+        console.log(`${ifname} : ${alias}`, `chromelog endpoint: http://${iface.address}:${port}`);
       } else {
         // this interface has only one ipv4 adress
-        console.log(ifname, iface.address);
+        console.log(ifname, `chromelog endpoint: http://${iface.address}:${port}`);
       }
       alias = alias+1;
     });

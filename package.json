@@ -4,7 +4,7 @@
   "description": "Log stuff from anywhere into chrome",
   "main": "client.js",
   "scripts": {
-    "start": "./server",
+    "start": "./server.js",
     "build": "npm run clean && babel src/ --out-dir lib/",
     "watch": "npm run clean && babel -w src/ --out-dir lib/",
     "clean": "rm -rf lib/",
