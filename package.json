@@ -1,6 +1,6 @@
 {
   "name": "chromelog",
-  "version": "0.9.1",
+  "version": "1.0.0",
   "description": "Log stuff from anywhere into chrome",
   "main": "client.js",
   "scripts": {
