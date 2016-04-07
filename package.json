@@ -1,7 +1,8 @@
 {
   "name": "chromelog",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Log stuff from anywhere into chrome",
+  "repository": "https://github.com/fractaltech/chromelog"
   "main": "client.js",
   "scripts": {
     "start": "./server.js",
